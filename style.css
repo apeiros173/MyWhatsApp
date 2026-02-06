@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #0c1317;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* ICON BAR */
+.icon-bar {
+  width: 60px;
+  background: #202c33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  gap: 25px;
+}
+
+.icon-bar i {
+  font-size: 22px;
+  color: #aebac1;
+  cursor: pointer;
+}
+
+.icon-bar i.active,
+.icon-bar i:hover {
+  color: #00a884;
+}
+
+.side-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  text-decoration: none;
+  color: #aebac1;
+}
+
+.side-item img {
+  width: 24px;
+}
+
+.side-item:hover {
+  color: white;
+}
+
+.icon-bottom {
+  margin-top: auto;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon-bottom img {
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 350px;
+  background: #050505;
+  border-right: 1px solid #222d34;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  background: #202c33;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.search {
+  padding: 8px;
+}
+
+.search input {
+  background: #202c33;
+  border: none;
+  color: white;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.chat-item img {
+  width: 45px;
+  height: 45px;        /* 🔴 FALTABA */
+  border-radius: 50%;
+  object-fit: cover;  /* 🔴 CLAVE */
+}
+
+.chat-item:hover {
+  background: #202c33;
+}
+
+.chat-header img {
+  width: 40px;
+  height: 40px;        /* 🔴 CLAVE */
+  border-radius: 50%;
+  object-fit: cover;  /* 🔴 CLAVE */
+}
+
+
+/* CHAT AREA */
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #0c1317;
+}
+
+.chat-header {
+  background: #202c33;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+
+  /* FONDO tipo WhatsApp */
+  background-image: url("wallper.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.msg {
+  max-width: 60%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.sent {
+  background: #005c4b;
+  margin-left: auto;
+  color: white;
+}
+
+.received {
+  background: #202c33;
+  color: white;
+}
+
+.input-area {
+  background: #202c33;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  background: #2a3942;
+  border: none;
+  color: white;
+}
+.input-area input::placeholder {
+  color: #8696a0;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.input-area input.form-control {
+  background: #2a3942;
+  color: #e9edef;
+  border: none;
+}
+
+.input-area input.form-control:focus {
+  background: #2a3942;
+  color: #e9edef;
+  border: none;
+  box-shadow: none;
+}
+/*estilo para la hoara de "enviado"*/
+.msg {
+  position: relative;
+  padding-bottom: 18px; /* espacio para la hora */
+}
+
+.msg-time {
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+  font-size: 11px;
+  color: #d1d7db;
+  opacity: 0.8;
+}
